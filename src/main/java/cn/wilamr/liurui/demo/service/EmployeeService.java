@@ -28,6 +28,11 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
     @Transactional(readOnly = true)
+    public Employee findOneByLoginid(String loginid) {
+        log.debug("EmployeeService.findOneByLoginid");
+        return employeeRepository.findOneByLoginid(loginid);
+    }
+    @Transactional(readOnly = true)
     public Optional<Employee> findOne(Long id) {
         log.debug("EmployeeService.findOne, id : {}", id);
         return employeeRepository.findById(id);

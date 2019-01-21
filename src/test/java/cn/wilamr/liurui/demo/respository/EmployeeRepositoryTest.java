@@ -32,7 +32,7 @@ public class EmployeeRepositoryTest {
     @Test
     public void testFindByLoginid() {
 
-        assertEquals("刘锐", employeeRepository.findOneByLoginid("liurui6").getLastname());
+        assertEquals("denglu", employeeRepository.findOneByLoginid("liurui6").getLastname());
     }
 
 }
